@@ -1,0 +1,32 @@
+<div class="page-header" id="banner">
+  <div class="row">
+    <div class="col-lg-10 col-md-10">
+      <h1>監視対象のインポート</h1>
+      <p class="lead">SKUのリストをインポート</p>
+
+      <%= form_tag({controller: "stocks", action: "import", method: "post"}, {multipart: true}) do %>
+        <div class="form-group">
+          <%= file_field_tag :file %>
+        </div>
+        <%= submit_tag "インポート", class: "form-control-button" %>
+      <% end %>
+
+      <% if flash[:alarm] %>
+        <br>
+        <br>
+        <div class="alert alert-danger col-sm-3">
+          <%= flash[:alarm] %>
+        </div>
+      <% end %>
+
+      <% if flash[:success] %>
+        <br>
+        <br>
+        <div class="alert alert-success col-sm-3">
+          <%= flash[:success] %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
