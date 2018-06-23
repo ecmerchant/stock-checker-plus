@@ -12,6 +12,24 @@
           <%= f.label :aws_token, "MWS認証トークン" %>
           <%= f.text_field :aws_token, class: 'form-control'  %>
         </div>
+
+        <p class="lead">在庫チェックの対象</p>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :yahoo, class: 'checkbox' %>ヤフオク
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :mercari, class: 'checkbox' %>メルカリ
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <%= f.check_box :surugaya, class: 'checkbox' %>駿河屋
+          </label>
+        </div>
+
         <p class="lead">在庫チェック時の出品設定</p>
         <fieldset class="form-group">
         <div class="form-check">

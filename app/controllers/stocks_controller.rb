@@ -147,7 +147,7 @@ class StocksController < ApplicationController
 
   private
   def user_params
-     params.require(:account).permit(:user, :seller_id, :aws_token, :relist_only, :sku_limit, :sku_header, :cw_room_id, :cw_api_token, :leadtime, :delete_sku)
+     params.require(:account).permit(:user, :seller_id, :aws_token, :relist_only, :sku_limit, :sku_header, :cw_room_id, :cw_api_token, :leadtime, :delete_sku, :yahoo, :mercari, :surugaya)
   end
 
 end

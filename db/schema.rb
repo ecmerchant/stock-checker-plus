@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503065123) do
+ActiveRecord::Schema.define(version: 20180623004614) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "user"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 20180503065123) do
     t.integer  "leadtime"
     t.string   "sku_header"
     t.boolean  "delete_sku"
+    t.boolean  "yahoo"
+    t.boolean  "mercari"
+    t.boolean  "surugaya"
   end
 
   create_table "stocks", force: :cascade do |t|
